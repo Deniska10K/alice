@@ -37,25 +37,25 @@ def rock_paper_scissors():
             if game_action == "камень":
                 if user_action == "камень":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Ничья")
-                if user_action == "ножницы":
+                elif user_action == "ножницы":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Поражение")
-                if user_action == "бумага":
+                elif user_action == "бумага":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Победа")
 
-            if game_action == "ножницы":
+            elif game_action == "ножницы":
                 if user_action == "камень":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Победа")
-                if user_action == "ножницы":
+                elif user_action == "ножницы":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Ничья")
-                if user_action == "бумага":
+                elif user_action == "бумага":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Поражение")
 
-            if game_action == "бумага":
+            elif game_action == "бумага":
                 if user_action == "камень":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Поражение")
-                if user_action == "ножницы":
+                elif user_action == "ножницы":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Победа")
-                if user_action == "бумага":
+                elif user_action == "бумага":
                     print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Ничья")
 
 
