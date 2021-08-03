@@ -26,6 +26,7 @@ import random
 
 def rock_paper_scissors():
     print("Вы выбрали игру «Камень, ножницы, бумага»")
+    winning = {"камень": "ножницы", "бумага": "камень", "ножницы": "бумага"}
     while True:
         user_action = input("\nВыберите ход: (камень / ножницы / бумага)\nИли напишите 'exit' чтобы выйти из игры\n"
                             "Ваш выбор: ")
@@ -33,30 +34,13 @@ def rock_paper_scissors():
             main_menu()
         else:
             game_action = random.choice(("камень", "ножницы", "бумага"))
-
-            if game_action == "камень":
-                if user_action == "камень":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Ничья")
-                elif user_action == "ножницы":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Поражение")
-                elif user_action == "бумага":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Победа")
-
-            elif game_action == "ножницы":
-                if user_action == "камень":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Победа")
-                elif user_action == "ножницы":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Ничья")
-                elif user_action == "бумага":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Поражение")
-
-            elif game_action == "бумага":
-                if user_action == "камень":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Поражение")
-                elif user_action == "ножницы":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Победа")
-                elif user_action == "бумага":
-                    print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> Ничья")
+            if game_action == user_action:
+                result = "Ничья"
+            elif winning[game_action] == user_action:
+                result = "Поражение"
+            else:
+                result = "Победа"
+            print(f"Вы выбрали {user_action}, игра выбрала {game_action} ==> {result}")
 
 
 def guess_the_number():
