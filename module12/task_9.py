@@ -66,7 +66,7 @@ def guess_the_number():
         if user_action == 'exit':
             main_menu()
         else:
-            game_action = str(random.randrange(0, 10))
+            game_action = str(random.randrange(0, 101))
             while user_action != game_action:
                 user_action = input("Вы не угадали, попробуйте снова: ")
                 if user_action == 'exit':
