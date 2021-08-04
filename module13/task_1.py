@@ -36,5 +36,6 @@ def float_converter(n):
             k += 1
     return f"Формат плавающей точки: x = {n} * 10 ** {k}"
 
+
 if __name__ == '__main__':
     print(float_converter(float(input())))
