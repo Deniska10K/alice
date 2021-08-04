@@ -25,15 +25,16 @@ print('Задача 4. Число наоборот')
 # Кстати, нули, которые мы убрали, называются ведущими.
 
 
-def rotate_digit(n: str):
+def rotate_digit(n):
+    n = str(n)
     while n[-1] == '0':
         n = n[:-1]
-    return n[::-1]
+    return int(n[::-1])
 
 
 if __name__ == '__main__':
     while True:
-        n = input("Введите число: ")
+        n = int(input("Введите число: "))
         if n == '0':
             print("Программа завершена!")
             exit()
