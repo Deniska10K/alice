@@ -74,8 +74,6 @@ def main_menu():
             rock_paper_scissors()
         elif game == '2':
             guess_the_number()
-        else:
-            break
 
 
 if __name__ == '__main__':
