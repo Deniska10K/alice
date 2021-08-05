@@ -31,7 +31,7 @@ def rock_paper_scissors():
         user_action = input("\nВыберите ход: (камень / ножницы / бумага)\nИли напишите 'exit' чтобы выйти из игры\n"
                             "Ваш выбор: ")
         if user_action == 'exit':
-            main_menu()
+            return
         else:
             game_action = random.choice(("камень", "ножницы", "бумага"))
             if game_action == user_action:
@@ -48,31 +48,34 @@ def guess_the_number():
     while True:
         user_action = int(input("Введите число: (от 0 до 100)\nИли напишите 'exit' чтобы выйти из игры\nВаш выбор: "))
         if user_action == 'exit':
-            main_menu()
+            return
         else:
             game_action = str(random.randrange(0, 101))
             while user_action != game_action:
                 user_action = input("Вы не угадали, попробуйте снова: ")
                 if user_action == 'exit':
-                    main_menu()
+                    return
             else:
                 print("Вы победили!")
                 end_action = input("\nСыграем еще?\n1) Да\n2) Нет\nВаш выбор: ")
                 if end_action == '1':
                     guess_the_number()
                 else:
-                    main_menu()
+                    return
 
 
 def main_menu():
-    game = input("\nВыберите игру:\n"
-                 "1) Камень, ножницы, бумага\n"
-                 "2) Угадай число\n"
-                 "Ваш выбор: ")
-    if game == '1':
-        rock_paper_scissors()
-    elif game == '2':
-        guess_the_number()
+    while True:
+        game = input("\nВыберите игру:\n"
+                     "1) Камень, ножницы, бумага\n"
+                     "2) Угадай число\n"
+                     "Ваш выбор: ")
+        if game == '1':
+            rock_paper_scissors()
+        elif game == '2':
+            guess_the_number()
+        else:
+            break
 
 
 if __name__ == '__main__':

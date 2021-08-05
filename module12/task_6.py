@@ -26,7 +26,7 @@ print('Задача 6. Монетка')
 
 
 def scanner(x: int, y: int):
-    if x in range(-1, 2) and y in range(-1, 2):
+    if (-1 <= x <= 1) and (-1 <= y <= 1):
         return "Монетка где-то рядом"
     else:
         return "Монетки в области нет"
