@@ -13,9 +13,10 @@ print('Задача 7. Опять?')
 # Напишите для него такую программу.
 
 
-def min_digit(n):
-    return sorted([int(i) for i in n])[0]
+def min_digit(list_of_numbers):
+    return sorted(list_of_numbers)[0]
 
 
 if __name__ == '__main__':
-    print(min_digit(input("Введите число: ")))
+    list_ = tuple(map(float, (input("Введите список чисел через пробел: ").split())))
+    print(f"Минимальное число из списка: {min_digit(list_)}")
