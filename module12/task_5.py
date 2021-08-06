@@ -22,13 +22,12 @@ print('Задача 5. Текстовый редактор')
 
 
 def count_letters(text: str, digit: str, letter: str):
-    return text.count(digit), text.count(letter)
+    print(f"Количество цифр {digit}: {text.count(digit)}\n"
+          f"Количество букв {letter}: {text.count(letter)}")
 
 
 if __name__ == '__main__':
     text = input("Введите текст: ")
     digit = input("Какую цифру ищем? ")
     letter = input("Какую букву ищём? ")
-    function_ans = count_letters(text, digit, letter)
-    print(f"Количество цифр {digit}: {function_ans[0]}\n"
-          f"Количество букв {letter}: {function_ans[1]}")
+    count_letters(text, digit, letter)

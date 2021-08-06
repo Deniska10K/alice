@@ -18,4 +18,5 @@ def summa_n(n: int):
 
 
 if __name__ == '__main__':
-    print(summa_n(int(input())))
+    n = int(input("Введите число: "))
+    print(f"Я знаю, что сумма чисел от 1 до {n} равна {summa_n(n)}")
