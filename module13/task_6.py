@@ -25,7 +25,7 @@ print('Задача 6. Недоделка 2')
 # чтобы в основной части программы был только ввод чисел, затем изменённые числа и вывод их суммы.
 
 
-def digit_replacer(digit1, digit2):
+def digit_replacer(digit1: str, digit2: str):
     if len(digit1) >= 3 and len(digit2) >= 4:
         digit1 = f"{digit1[-1]}{digit1[1:-1]}{digit1[0]}"
         digit2 = f"{digit2[-1]}{digit2[1:-1]}{digit2[0]}"
