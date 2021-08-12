@@ -46,6 +46,7 @@ def safe_depth(danger_level):
             x0 = t
     return (x0 + x1) / 2
 
+
 if __name__ == '__main__':
     danger_level = float(input("Введите максимально допустимый уровень опасности: "))
     print(f"Приблизительная глубина безопасной кладки: {safe_depth(danger_level)}")
