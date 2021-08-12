@@ -38,4 +38,4 @@ def float_converter(n):
 
 
 if __name__ == '__main__':
-    print(float_converter(float(input())))
+    print(float_converter(float(input("Введите число: "))))
