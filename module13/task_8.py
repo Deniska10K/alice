@@ -31,7 +31,7 @@ print('Задача 8. Яйца')
 # Приблизительная глубина безопасной кладки: 0.732421875 м
 
 
-def f(x):
+def calculate_by_formula(x):
     return x ** 3 - 3 * x ** 2 - 12 * x + 10
 
 
@@ -40,7 +40,7 @@ def safe_depth(danger_level):
     x1 = 4.0
     while x1 - x0 >= danger_level:
         t = (x0 + x1) / 2
-        if f(x0) * f(t) < 0:
+        if calculate_by_formula(x0) * calculate_by_formula(t) < 0:
             x1 = t
         else:
             x0 = t
