@@ -25,23 +25,20 @@ print('Задача 6. Недоделка 2')
 # чтобы в основной части программы был только ввод чисел, затем изменённые числа и вывод их суммы.
 
 
-def digit_replacer(digit1: str, digit2: str):
-    if len(digit1) >= 3 and len(digit2) >= 4:
-        digit1 = f"{digit1[-1]}{digit1[1:-1]}{digit1[0]}"
-        digit2 = f"{digit2[-1]}{digit2[1:-1]}{digit2[0]}"
-    else:
-        return
-    return int(digit1), int(digit2)
+def digit_replacer(digit: str):
+    digit = f"{digit[-1]}{digit[1:-1]}{digit[0]}"
+    return int(digit)
 
 
 if __name__ == '__main__':
     first_n = input("Введите первое число: ")
     second_n = input("Введите второе число: ")
-    value = None
-    if digit_replacer(first_n, second_n):
-        first_n_modified, second_n_modified = digit_replacer(first_n, second_n)
-        value = first_n_modified + second_n_modified
 
-    print((f"Измененное первое число: {first_n_modified}\n"
-           f"Измененное второе число: {second_n_modified}\n"
-           f"Сумма измененных чисел равна: {value}") if value else "Ошибка")
+    if len(first_n) >= 3 and len(second_n) >= 4:
+        first_n_modified, second_n_modified = digit_replacer(first_n), digit_replacer(second_n)
+        value = first_n_modified + second_n_modified
+        print(f"Измененное первое число: {first_n_modified}\n"
+              f"Измененное второе число: {second_n_modified}\n"
+              f"Сумма измененных чисел равна: {value}")
+    else:
+        print("Ошибка")
